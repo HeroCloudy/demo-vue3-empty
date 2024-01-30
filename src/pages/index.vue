@@ -30,10 +30,33 @@
 
     <!-- custom -->
     <div class="i-ic:baseline-4g-plus-mobiledata w-2em h-2em" style="color: red"></div>
+
+    <!--    <ReloadPrompt></ReloadPrompt>-->
+
+    <!--    <div>hello</div>-->
   </div>
 </template>
 
 <script setup lang="ts">
+import { useRegisterSW } from 'virtual:pwa-register/vue'
+
+const intervalMS = 5 * 1000
+
+onMounted(() => {
+  useRegisterSW({
+    immediate: true,
+    // onNeedRefresh() {
+    //   console.log('need refresh')
+    // },
+    onRegisteredSW(_url, registration) {
+      // console.log(url, registration)
+      registration &&
+        setInterval(() => {
+          registration.update()
+        }, intervalMS)
+    }
+  })
+})
 // defineOptions({
 //   name: 'HomeIndex'
 // })
