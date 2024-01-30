@@ -8,6 +8,8 @@
   <router-link to="/">home</router-link>
   <router-link to="/about">about</router-link>
   <div>Index Page</div>
+
+  <h1 class="text-3xl font-bold underline">Hello world!</h1>
 </template>
 
 <script setup lang="ts">
