@@ -16,3 +16,7 @@ console.log('about')
 .about {
 }
 </style>
+<route lang="yaml">
+meta:
+  layout: home
+</route>
