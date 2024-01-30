@@ -6,15 +6,16 @@
 -->
 <template>
   <div class="default">
-    <div>header</div>
+    <div class="flex">
+      <router-link to="/">首页</router-link>
+      <router-link to="/about">about</router-link>
+    </div>
     <router-view></router-view>
     <div>footer</div>
   </div>
 </template>
 
-<script setup lang="ts">
-console.log('default')
-</script>
+<script setup lang="ts"></script>
 
 <style scoped>
 .default {
