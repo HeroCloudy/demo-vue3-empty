@@ -34,6 +34,12 @@
 </template>
 
 <script setup lang="ts">
+// defineOptions({
+//   name: 'HomeIndex'
+// })
+
+// defineRender(() => <div>Hello</div>)
+
 const msg = ref('hello world')
 
 const target = ref(null)
