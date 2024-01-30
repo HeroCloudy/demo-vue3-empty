@@ -5,17 +5,24 @@
  @time: 2024/1/28 23:30
 -->
 <template>
-  <router-link to="/">home</router-link>
-  <router-link to="/about">about</router-link>
-  <div>Index Page</div>
-  <div class="text-3xl font-bold underline">hello world</div>
+  <div ref="target">
+    <router-link to="/">home</router-link>
+    <router-link to="/about">about</router-link>
+    <div>{{ msg }}</div>
+    <div class="text-3xl font-bold underline">hello world</div>
+
+    <p>x: {{ x }}</p>
+    <p>y: {{ y }}</p>
+    <p>isOutSide: {{ isOutside }}</p>
+  </div>
 </template>
 
 <script setup lang="ts">
-console.log('index')
+const msg = ref('hello world')
+
+const target = ref(null)
+
+const { x, y, isOutside } = useMouseInElement(target)
 </script>
 
-<style scoped>
-.index {
-}
-</style>
+<style scoped></style>
