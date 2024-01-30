@@ -14,6 +14,8 @@
     <p>x: {{ x }}</p>
     <p>y: {{ y }}</p>
     <p>isOutSide: {{ isOutside }}</p>
+
+    <hello-world msg="Hello world Component"></hello-world>
   </div>
 </template>
 
